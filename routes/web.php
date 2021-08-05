@@ -23,4 +23,9 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/addpassword', [App\Http\Controllers\NavigationController::class, 'addpass'])->name('addpassword');
+    Route::post('/generate', [App\Http\Controllers\PasswordController::class, 'generate'])->name('generate');
+    Route::post('/advancedGenerate', [App\Http\Controllers\PasswordController::class, 'advancedGenerate'])->name('advanced.generate');
+    Route::post('/password/create', [App\Http\Controllers\PasswordController::class, 'create'])->name('password.create');
+    Route::get('/options', [App\Http\Controllers\NavigationController::class, 'options'])->name('options');
+    Route::post('/changetoken', [App\Http\Controllers\PasswordController::class, 'changeToken'])->name('token.change');
 });

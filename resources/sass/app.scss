@@ -1,5 +1,13 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap');
 
 
@@ -163,4 +171,30 @@ html,body{
 .form-control:focus{
     box-shadow:0 0 0 0.2rem rgb(255 76 41 / 25%);
     border-color: #f8652d;
+}
+
+.btn-disabled{
+    background-color: $disabled3;
+    color: $disabled;
+    font-weight: bolder;
+    border-color: $disabled;
+}
+
+.btn-disabled:hover{
+    background-color: $disabled3!important;
+    color: $disabled!important;
+    border-color: $disabled!important;
+}
+.btn-disabled:active{
+    background-color: $disabled3!important;
+    color: $disabled!important;
+    border-color: $disabled!important;
+    box-shadow: none;
+}
+
+.btn-disabled:focus{
+    background-color: $disabled3;
+    color: $disabled;
+    border-color: $disabled;
+    box-shadow: none;
 }

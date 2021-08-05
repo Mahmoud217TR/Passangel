@@ -17,7 +17,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link @if(Route::current()->getName() == 'token')sb-active @endif">
+        <a href="/options" class="nav-link @if(Route::current()->getName() == 'options')sb-active @endif">
           Change your Token
         </a>
       </li>

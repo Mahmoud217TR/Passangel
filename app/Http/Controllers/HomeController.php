@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = auth()->user();
+        $passwords = $user->passwords;
+        return view('home',['passwords'=>$passwords]);
     }
 }

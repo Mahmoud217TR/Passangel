@@ -11,4 +11,10 @@ class NavigationController extends Controller
         $user = auth()->user();
         return view('addpassword',['user'=>$user]);
     }
+
+    public function options()
+    {
+        $user = auth()->user();
+        return view('options',['user'=>$user]);
+    }
 }

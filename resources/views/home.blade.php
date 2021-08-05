@@ -15,23 +15,25 @@
                         </div>
                     @endif
 
-                    <table class="table">
+                    <table class="table col-12">
                         <tr>
                             <th class="col-2 tb-head">Site/App Name</th>
                             <th class="col-2 tb-head">Email</th>
                             <th class="col-2 tb-head">Username</th>
-                            <th class="col-2 tb-head">Password</th>
-                            <th class="col-2 tb-head">Note</th>
-                            <th class="col-2 tb-head">Actions</th>
+                            <th class="col-3 tb-head">Password</th>
+                            <th class="col-2 tb-head">Last Modified</th>
+                            <th class="col-1 tb-head">Actions</th>
                         </tr>
+                        @foreach ($passwords as $p)
                         <tr>
-                            <td class="col-2">Site/App Name</td>
-                            <td class="col-2">Email</td>
-                            <td class="col-2">Username</td>
-                            <td class="col-2">Password</td>
-                            <td class="col-2">Note</td>
-                            <td class="col-2">Last Modified</td>
+                            <td class="col-2">{{ $p->name }}</td>
+                            <td class="col-2">{{ $p->email }}</td>
+                            <td class="col-2">{{ $p->username }}</td>
+                            <td class="col-3"><div style="width:300px;overflow:auto"><pre class="mb-0">{{ $p->decrypt($p->password) }}</pre></div></td>
+                            <td class="col-2">{{ $p->updated_at }}</td>
+                            <td class="col-1  p-2"><a class="btn btn-back" href="#">More</a></td>
                         </tr>
+                        @endforeach
                     </table>
                 </div>
         </div>
