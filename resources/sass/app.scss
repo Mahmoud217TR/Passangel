@@ -41,7 +41,7 @@ html,body{
 }
 
 .maindropdown .dropdown-item{
-    border-radius: 10px!important;
+    border-radius: 3px!important;
 }
 
 .maindropdown .dropdown-item:hover,.maindropdown .dropdown-item:focus{
@@ -62,21 +62,30 @@ html,body{
     color: $extra2;
 }
 
-.sidebar a:hover{
+.sidebar svg{
+    fill:$extra2;
+}
+
+.sidebar a:hover, .sidebar a:hover svg path{
+    color: $back!important;
+    font-weight: bolder;
+    fill:$back!important;
+}
+
+.sb-active{
     color: $back!important;
     background-color: $extra2!important;
     font-weight: bold;
     border-radius:10px 0px 0px 10px;
 }
-
-.sb-active{
-    color: $back!important;
-    font-weight: bolder;
+.sb-active svg{
+    fill:$back!important;
 }
 
 .sidebar .nav{
     width:100%;
 }
+
 
 .main{
     position: relative;
@@ -197,4 +206,22 @@ html,body{
     color: $disabled;
     border-color: $disabled;
     box-shadow: none;
+}
+
+svg{
+    fill: $extra2;
+}
+
+.sideShow{
+    background-color: $main;
+    border-radius: 0px 300px 300px 0px;
+}
+
+.show{
+    color:$extra2;
+    font-size: 20px;
+}
+
+.show h1{
+    font-size: 50px;
 }

@@ -20021,7 +20021,7 @@ html, body {
 }
 
 .maindropdown .dropdown-item {
-  border-radius: 10px !important;
+  border-radius: 3px !important;
 }
 
 .maindropdown .dropdown-item:hover, .maindropdown .dropdown-item:focus {
@@ -20042,16 +20042,25 @@ html, body {
   color: #FDFDFD;
 }
 
-.sidebar a:hover {
+.sidebar svg {
+  fill: #FDFDFD;
+}
+
+.sidebar a:hover, .sidebar a:hover svg path {
+  color: #082032 !important;
+  font-weight: bolder;
+  fill: #082032 !important;
+}
+
+.sb-active {
   color: #082032 !important;
   background-color: #FDFDFD !important;
   font-weight: bold;
   border-radius: 10px 0px 0px 10px;
 }
 
-.sb-active {
-  color: #082032 !important;
-  font-weight: bolder;
+.sb-active svg {
+  fill: #082032 !important;
 }
 
 .sidebar .nav {
@@ -20180,4 +20189,22 @@ html, body {
   color: #334756;
   border-color: #334756;
   box-shadow: none;
+}
+
+svg {
+  fill: #FDFDFD;
+}
+
+.sideShow {
+  background-color: #FF4C29;
+  border-radius: 0px 300px 300px 0px;
+}
+
+.show {
+  color: #FDFDFD;
+  font-size: 20px;
+}
+
+.show h1 {
+  font-size: 50px;
 }

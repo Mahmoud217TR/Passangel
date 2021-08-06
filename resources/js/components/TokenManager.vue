@@ -13,11 +13,16 @@
                 <span>Wait For Change</span>
             </a>
         </div>
+        <Toast message='Token Changed' v-if="show"></Toast>
     </div>
 </template>
 
 <script>
+    import Toast from './Toast.vue';
+
     export default {
+        components: { Toast },
+
         mounted() {
             console.log('Component mounted.')
             this.tokenV = this.token
@@ -25,7 +30,8 @@
         data() {
             return {
                 wait:false,
-                tokenV:'token'
+                tokenV:'token',
+                show:false,
             }
         },
         props:['token'],
@@ -33,13 +39,18 @@
             holdFunc(){
                 console.log('WAIT');
             },
+            showToast(){
+                this.show = true;
+                setTimeout(() => this.show =false, 2000);
+            },
             changeToken(){
                 this.wait = true;
                 axios.post('/changetoken').then(response =>{  
                     this.wait = false;
                     this.tokenV=response.data;
+                    this.showToast();
                 });
-            }
+            },
         },
     }
 </script>

@@ -22,6 +22,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('password-manager', require('./components/PasswordManager.vue').default);
 Vue.component('token-manager', require('./components/TokenManager.vue').default);
 Vue.component('backup-manager', require('./components/BackupManager.vue').default);
+Vue.component('copy-on-click', require('./components/CopyOnClick.vue').default);
+Vue.component('toast-message', require('./components/Toast.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

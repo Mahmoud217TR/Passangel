@@ -24,14 +24,15 @@
                             <th class="col-2 tb-head">Last Modified</th>
                             <th class="col-1 tb-head">Actions</th>
                         </tr>
+                        
                         @foreach ($passwords as $p)
                         <tr>
                             <td class="col-2">{{ $p->name }}</td>
                             <td class="col-2">{{ $p->email }}</td>
                             <td class="col-2">{{ $p->username }}</td>
-                            <td class="col-3"><div style="width:300px;overflow:auto"><pre class="mb-0">{{ $p->decrypt($p->password) }}</pre></div></td>
+                            <td class="col-3"><copy-on-click data ="{{ $p->decrypt($p->password) }}" counter = "data{{ $loop->index }}"></copy-on-click></td>
                             <td class="col-2">{{ $p->updated_at }}</td>
-                            <td class="col-1  p-2"><a class="btn btn-back" href="#">More</a></td>
+                            <td class="col-1  p-2"><a class="btn btn-back" href="show/{{ $p->id }}">More</a></td>
                         </tr>
                         @endforeach
                     </table>

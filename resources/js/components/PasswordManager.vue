@@ -100,8 +100,15 @@
             if(this.theme == 'error'){
                 this.$refs.pass.classList.add('is-invalid');
             }
+
+            if(this.passedit){
+                this.$refs.pass.value = this.passedit;
+                this.$refs.passconfirm.value = this.passedit;
+                this.checkStrength();
+                this.checkMatch();
+            }
         },
-        props:['message','theme'],
+        props:['message','theme','passedit'],
         data() {
             return {
                 show: false,
